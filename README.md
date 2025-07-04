@@ -27,7 +27,7 @@ Si te copa la idea y querés jugar con el código, acá te dejo cómo ponerlo a 
 
 ```bash
 # Primero clona el repositorio
-git clone https://github.com/TU-USUARIO/senko-website.git
+git clone https://github.com/ItsDasp/senko-website.git
 cd senko-website
 # Instala las dependencias
 npm install
