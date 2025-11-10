@@ -147,7 +147,7 @@ function TOS() {
                   ¿Tienes preguntas?
                 </h3>
                 <p className="text-foreground/70 mb-6">
-                  Si tienes alguna duda sobre estos términos, no dudes en contactarnos. 
+                  Si tienes alguna duda sobre estos términos, no dudes en contactarnos. Responderemos lo antes posible.
                   Estamos aquí para ayudarte y asegurar que tengas la mejor experiencia con Senko.
                 </p>
                 <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
