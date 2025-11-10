@@ -83,7 +83,7 @@ function Privacy() {
                 <img   
                   className="w-32 h-32 mx-auto rounded-full shadow-xl object-cover" 
                   alt="Senko"
-                 src="https://i.imgur.com/6WnWvds.jpeg" />
+                 src="https://cdn.senko.nekomera.xyz/webpage/1041550318602821804.webp" />
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
