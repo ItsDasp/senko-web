@@ -88,7 +88,7 @@ function FAQ() {
             <img   
               className="w-32 h-32 mx-auto rounded-full shadow-xl object-cover"
               alt="Senko"
-              src="https://i.imgur.com/Ns8TnQv.png"
+              src="https://cdn.senko.nekomera.xyz/webpage/senkopose.webp"
             />
           </div>
 
@@ -165,7 +165,7 @@ function FAQ() {
               <img   
                 className="w-20 h-20 object-contain" 
                 alt="Senko"
-                src="https://i.imgur.com/j1Fq3qA.png"
+                src="https://cdn.senko.nekomera.xyz/webpage/senkobread.webp"
               />
             </div>
                 

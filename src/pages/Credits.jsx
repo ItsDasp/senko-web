@@ -11,7 +11,7 @@ function Credits() {
       name: "Dasp",
       role: "Desarrollador Principal",
       description: "La mente y el corazón detrás de Senko Bot, trabajando para traer calidez y calidad a tu servidor de Discord.",
-      icon: <img src="https://i.imgur.com/LRNKFeK.jpeg" alt="icono Dasp" className="w-full h-full object-cover" />,
+      icon: <img src="https://cdn.senko.nekomera.xyz/webpage/dasp.webp" alt="icono Dasp" className="w-full h-full object-cover" />,
       color: "from-blue-400 to-cyan-400"
     },
     {
@@ -52,7 +52,7 @@ function Credits() {
                 <img
                   className="w-full h-full object-cover"
                   alt="Senko Credits"
-                  src="https://i.imgur.com/oiym97B.gif"
+                  src="https://cdn.senko.nekomera.xyz/webpage/senkolove.gif"
                 />
               </div>
 

@@ -89,7 +89,7 @@ function Home() {
                <img   
                   className="w-64 h-64 mx-auto rounded-full shadow-2xl floating-animation border-8 border-white/50 dark:border-slate-800/50 object-cover" 
                   alt="Senko San"
-                  src="https://i.imgur.com/JkubEXf.jpeg" />
+                  src="https://cdn.senko.nekomera.xyz/webpage/senko.webp" />
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full sparkle"></div>
                 <div className="absolute -bottom-2 -left-6 w-6 h-6 bg-orange-400 rounded-full sparkle" style={{ animationDelay: '1s' }}></div>
                 <div className="absolute top-1/2 -right-8 w-4 h-4 bg-amber-400 rounded-full sparkle" style={{ animationDelay: '0.5s' }}></div>
@@ -253,7 +253,7 @@ function Home() {
                <img   
                 className="w-32 h-32 mx-auto rounded-full shadow-xl tail-wave object-cover" 
                 alt="Senko San"
-                src="https://i.imgur.com/JkubEXf.jpeg" />
+                src="https://cdn.senko.nekomera.xyz/webpage/senko.webp" />
               </div>
               
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">

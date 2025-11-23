@@ -42,7 +42,7 @@ function Vote() {
                 <img
                   className="w-32 h-32 mx-auto rounded-full shadow-xl object-cover"
                   alt="Senko-san anime character giving a thumbs up"
-                  src="https://i.imgur.com/dYQkKMd.png"
+                  src="https://cdn.senko.nekomera.xyz/webpage/senkopat.webp"
                 />
               </div>
 

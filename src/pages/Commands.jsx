@@ -645,7 +645,7 @@ function Commands() {
                 <img
                   className="w-full h-full object-cover"
                   alt="Senko San Commands"
-                  src="https://i.imgur.com/Rbd5r1V.png"/>
+                  src="https://cdn.senko.nekomera.xyz/webpage/senkoreading.webp"/>
               </div>
 
               
@@ -752,7 +752,7 @@ function Commands() {
                   <img   
                     className="w-32 h-32 mx-auto rounded-full shadow-xl" 
                     alt="Senko-san"
-                   src="https://i.imgur.com/Rbd5r1V.png" />
+                   src="https://cdn.senko.nekomera.xyz/webpage/senkoreading.webp" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">
                   No se encontraron comandos
