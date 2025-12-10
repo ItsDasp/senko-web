@@ -8,6 +8,7 @@ import TOS from '@/pages/TOS';
 import Privacy from '@/pages/Privacy';
 import Credits from '@/pages/Credits';
 import Vote from '@/pages/Vote';
+import NotFound from '@/pages/NotFound';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/tos" element={<TOS />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </Router>

@@ -37,7 +37,7 @@ function Commands() {
       command: "/help",
       description: "Muestra todos los comandos disponibles de Senko",
       category: "general",
-      usage: "/help",
+      usage: "/help [comando opcional]",
       icon: <Bot className="w-5 h-5" />
     },
     {
@@ -286,6 +286,63 @@ function Commands() {
       usage: "/afk mod unignore [#canal]",
       icon: <Clock className="w-5 h-5" />
     },
+    {
+      command: "/birthday list",
+      description: "Muestra la lista de cumpleaños del servidor",
+      category: "utility",
+      usage: "/birthday list [mes opcional]",
+      icon: <Sparkles className="w-5 h-5" />
+    },
+    {
+      command: "/birthday info",
+      description: "Muestra la información del cumpleaños que tengas guardado",
+      category: "utility",
+      usage: "/birthday info",
+      icon: <Sparkles className="w-5 h-5" />
+    },
+    {
+      command: "/birthday set",
+      description: "Establece la fecha de tu cumpleaños",
+      category: "utility",
+      usage: "/birthday set [fecha dd/mm/aaaa]",
+      icon: <Sparkles className="w-5 h-5" />
+    },
+    {
+      command: "/birthday remove",
+      description: "Elimina tu fecha de cumpleaños",
+      category: "utility",
+      usage: "/birthday remove",
+      icon: <Sparkles className="w-5 h-5" />
+    },
+    {
+      command: "/birthday allow",
+      description: "Permite que se muestre tu cumpleaños en la lista de un servidor en especifico (o en todos si no se especifica)",
+      category: "utility",
+      usage: "/birthday allow [todos opcional]",
+      icon: <Sparkles className="w-5 h-5" />
+    },
+    {
+      command: "/birthday deny",
+      description: "No permite que se muestre tu cumpleaños en la lista de un servidor en especifico (o en todos si no se especifica)",
+      category: "utility",
+      usage: "/birthday deny [todos opcional]",
+      icon: <Sparkles className="w-5 h-5" />
+    },
+    {
+      command: "/birthday config",
+      description: "Configura las opciones de cumpleaños del servidor",
+      category: "utility",
+      usage: "/birthday config",
+      icon: <Sparkles className="w-5 h-5" />
+    },
+    {
+      command: "/birthday setup",
+      description: "Configura el sistema de cumpleaños del servidor mediante un asistente paso a paso",
+      category: "utility",
+      usage: "/birthday setup",
+      icon: <Sparkles className="w-5 h-5" />
+    },
+
     {
       command: "/search google image",
       description: "Busca imágenes en Google y las muestra en el chat",
@@ -545,7 +602,7 @@ function Commands() {
       command: "/clear bots",
       description: "Borra una cantidad de mensajes de bots",
       category: "moderation",
-      usage: "/clear bots [cantida]",
+      usage: "/clear bots [cantidad]",
       icon: <Shield className="w-5 h-5"/>
     },
     {
@@ -573,7 +630,7 @@ function Commands() {
       command: "/clear menciones",
       description: "Borra una cantidad de mensajes que contengan menciones",
       category: "moderation",
-      usage: "/clear menciones [cantida]",
+      usage: "/clear menciones [cantidad]",
       icon: <Shield className="w-5 h-5"/>
     },
     {
@@ -590,6 +647,57 @@ function Commands() {
       usage: "/clear user [@usuario] [cantidad]",
       icon: <Shield className="w-5 h-5"/>
     },
+
+
+    {
+      command: "/animal cat",
+      description: "Muestra una imagen aleatoria de un gato",
+      category: "animals",
+      usage: "/animal cat",
+      icon: <Rabbit className="w-5 h-5"/>
+    },
+    {
+      command: "/animal dog",
+      description: "Muestra una imagen aleatoria de un perro",
+      category: "animals",
+      usage: "/animal dog",
+      icon: <Rabbit className="w-5 h-5"/>
+    },
+    {
+      command: "/animal fox",
+      description: "Muestra una imagen aleatoria de un zorro",
+      category: "animals",
+      usage: "/animal fox",
+      icon: <Rabbit className="w-5 h-5"/>
+    },
+    {
+      command: "/animal panda",
+      description: "Muestra una imagen aleatoria de un panda",
+      category: "animals",
+      usage: "/animal panda",
+      icon: <Rabbit className="w-5 h-5"/>
+    },
+    {
+      command: "/animal bird",
+      description: "Muestra una imagen aleatoria de un pájaro",
+      category: "animals",
+      usage: "/animal bird",
+      icon: <Rabbit className="w-5 h-5"/>
+    },
+    {
+      command: "/animal kangaroo",
+      description: "Muestra una imagen aleatoria de un canguro",
+      category: "animals",
+      usage: "/animal kangaroo",
+      icon: <Rabbit className="w-5 h-5"/>
+    },
+    {
+      command: "/animal koala",
+      description: "Muestra una imagen aleatoria de un koala",
+      category: "animals",
+      usage: "/animal koala",
+      icon: <Rabbit className="w-5 h-5"/>
+    }
   ];
 
   const categories = [
@@ -599,7 +707,8 @@ function Commands() {
     { value: 'utility', label: 'Utilidades', icon: <Coffee className="w-4 h-4" /> },
     { value: 'moderation', label: 'Moderación', icon: <Shield className="w-4 h-4" /> },
     { value: 'interaction', label: 'Interacción', icon: <Smile className="w-4 h-4"/>},
-    { value: 'info', label: "Información", icon: <Info className="w-4 h-4"/>}
+    { value: 'info', label: "Información", icon: <Info className="w-4 h-4"/>},
+    { value: 'animals', label: "Animales", icon: <Rabbit className="w-4 h-4"/>},
   ];
 
   const filteredCommands = useMemo(() => {
@@ -618,7 +727,8 @@ function Commands() {
       fun: 'from-pink-400 to-rose-400',
       utility: 'from-green-400 to-emerald-400',
       moderation: 'from-red-400 to-orange-400',
-      interaction: 'from-purple-400 to-pink-400'
+      interaction: 'from-purple-400 to-pink-400',
+      animals: 'from-teal-400 to-cyan-400',
     };
     return colors[category] || 'from-gray-400 to-gray-500';
   };

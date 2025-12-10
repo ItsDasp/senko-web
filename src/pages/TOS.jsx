@@ -45,7 +45,17 @@ function TOS() {
     },
     {
       title: "10. Contacto",
-      content: "Si tienes preguntas sobre estos Términos de Servicio, puedes contactarnos a través de nuestro servidor de Discord de soporte o usando el comando /help en el bot."
+      content: (
+        <>
+        Si tienes preguntas sobre estos Términos de Servicio, puedes contactarnos a través de nuestro servidor de Discord de soporte o usando el comando /help en el bot. También puedes escribirnos al correo {' '}
+        <a
+            href="mailto:senko@nekomera.xyz"
+            className="text-orange-500 font-semibold hover:text-orange-600 "
+          >
+            senko@nekomera.xyz
+          </a>.
+        </>
+      )
     }
   ];
 
@@ -136,9 +146,9 @@ function TOS() {
                 transition={{ duration: 0.6, delay: 1.0 }}
                 className="bg-secondary/50 rounded-2xl p-8 text-center"
               >
-                <div className="relative mb-6">
+                <div className="relative mb-6 w-24 h-24 mx-auto rounded-full shadow-lg flex items-center justify-center overflow-hidden">
                   <img   
-                    className="w-24 h-24 mx-auto rounded-full shadow-xl object-cover" 
+                    className="w-20 h-20 object-contain" 
                     alt="Senko"
                    src="https://cdn.senko.nekomera.xyz/webpage/senkobread.webp" />
                 </div>

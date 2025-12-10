@@ -17,7 +17,7 @@ function Vote() {
       color: "from-blue-500 to-indigo-600",
       link: "https://top.gg/bot/1207787243817930802"
     },
-    // Puedes agregar más sitios aquí
+
   ];
 
   return (
@@ -54,7 +54,6 @@ function Vote() {
               </p>
             </motion.div>
 
-            {/* CENTRADO AUTOMÁTICO */}
             <div className={`grid gap-8 max-w-6xl mx-auto ${
               voteSites.length === 1 ? 'grid-cols-1 place-items-center' : 'md:grid-cols-1 lg:grid-cols-3'
             }`}>

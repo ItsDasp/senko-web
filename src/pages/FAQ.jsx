@@ -62,7 +62,21 @@ function FAQ() {
     },
     {
       question: "¿Cómo puedo obtener soporte técnico?",
-      answer: "Puedes unirte a nuestro servidor de soporte de Discord donde nuestro equipo y la comunidad pueden ayudarte con cualquier pregunta o problema que tengas."
+      answer: (
+        <>
+          Puedes unirte a nuestro servidor de soporte de Discord donde nuestro equipo y la comunidad pueden ayudarte con cualquier pregunta o problema que tengas. También puedes comunicarte con nosotros a través del correo{' '}
+          <a
+            href="mailto:senko@nekomera.xyz"
+            className="text-orange-500 font-semibold hover:text-orange-600 "
+          >
+            senko@nekomera.xyz
+          </a>.
+        </>
+      )
+    },
+    {
+      question: "¿Como funciona el sistema de cumpleaños?",
+      answer: "Puedes registrar tu cumpleaños usando el comando /birthday set [dd/mm/aaaa]. Senko te felicitará en los servidores que estes y este configurado el sistema. Los administradores pueden configurar un canal específico para las felicitaciones con /birthday config."
     }
   ];
 
@@ -143,7 +157,7 @@ function FAQ() {
                         className="px-6 pb-6"
                       >
                         <div className="pl-14 pr-4">
-                          <p className="text-foreground/70 leading-relaxed">
+                          <p className="text-foreground/70 leading-relaxed mt-2">
                             {faq.answer}
                           </p>
                         </div>
@@ -172,10 +186,10 @@ function FAQ() {
                 <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
                   ¿No encontraste tu respuesta?
                 </h3>
-                <p className="text-foreground/70 mb-6">
+                <p className="text-foreground/70 mb-6 pr-4 pl-4">
                   ¡No te preocupes! Puedes contactarnos directamente en nuestro servidor de Discord 
-                  o usar el comando <code className="bg-muted px-2 py-1 rounded text-orange-500">/help</code> 
-                  para obtener más información.
+                  o usar el comando  <code className="bg-muted px-2 py-1 rounded text-orange-500">/help</code> 
+                   para obtener más información.
                 </p>
               </div>
             </motion.div>

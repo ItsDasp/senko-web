@@ -35,13 +35,13 @@ function Home() {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Moderación",
-      description: "Protege tu servidor con moderación diversos comandos de moderación.",
+      description: "Proteje tu servidor con diversos comandos de moderación y filtros de automoderación faciles de usar.",
       color: "from-blue-400 to-cyan-400"
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Sistema AFK",
-      description: "Gestiona estados AFK de usuarios para mantener la comunicación fluida.",
+      description: "Deja que tus amigos sepan cuando estás ausente con respuestas automáticas.",
       color: "from-green-400 to-emerald-400"
     },
     {
@@ -64,7 +64,7 @@ function Home() {
     { command: "/search google image [término]", description: "Busca imágenes en Google" },
     { command: "/interact hug [@usuario]", description: "Dale un abrazo virtual a alguien" },
     { command: "/kick", description: "Expulsa a los usuarios molestos de tu servidor" },
-    { command: "/ping", description: "Verifica la latencia del bot" }
+    { command: "/interact kiss [@usuario]", description: "Dale un beso virtual a alguien" }
   ];
 
   return (
@@ -139,7 +139,7 @@ function Home() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent pb-2">
                 ¿Qué puedo hacer por ti?
               </h2>
               <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
