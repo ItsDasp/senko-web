@@ -43,26 +43,6 @@ function TOS() {
     {
       title: "9. Cumplimiento con Discord",
       content: "Senko Bot opera sobre la plataforma de Discord y respeta sus condiciones para desarrolladores. Debes cumplir tanto estos Términos como los Términos de Servicio y Normas de la Comunidad de Discord; las infracciones pueden conllevar medidas por parte de Discord y/o la restricción de acceso al bot."
-    },
-    {
-      title: "10. Contacto",
-      content: (
-        <>
-        Si tienes preguntas sobre estos Términos de Servicio o sobre el uso de Senko Bot, puedes contactarnos a través de nuestro servidor de soporte en Discord o usando el comando /help en el bot. También puedes escribirnos al correo{' '}
-        <a
-            href="mailto:senko@nekomera.xyz"
-            className="text-orange-500 font-semibold hover:text-orange-600 "
-          >
-            senko@nekomera.xyz
-          </a>{' '}o a{' '}
-          <a
-            href="mailto:contacto@xdasp.me"
-            className="text-orange-500 font-semibold hover:text-orange-600 "
-          >
-            contacto@xdasp.me
-          </a>. Los datos que nos facilites para soporte se tratarán solo para gestionar tu consulta, de acuerdo con la Política de Privacidad.
-        </>
-      )
     }
   ];
 
@@ -189,8 +169,21 @@ function TOS() {
                   ¿Tienes preguntas?
                 </h3>
                 <p className="text-foreground/70 mb-6">
-                  Si tienes alguna duda sobre estos términos, no dudes en contactarnos. Responderemos lo antes posible.
-                  Estamos aquí para ayudarte y asegurar que tengas la mejor experiencia con Senko.
+                  Si tienes alguna duda sobre estos términos o sobre el uso de Senko Bot, puedes contactarnos a través de nuestro servidor de soporte en Discord o usando el comando <code className="bg-muted px-1 py-0.5 rounded text-orange-500">/help</code> en el bot.
+                  {' '}También puedes escribirnos a{' '}
+                  <a
+                    href="mailto:senko@nekomera.xyz"
+                    className="text-orange-500 font-semibold hover:text-orange-600"
+                  >
+                    senko@nekomera.xyz
+                  </a>{' '}o a{' '}
+                  <a
+                    href="mailto:contacto@xdasp.me"
+                    className="text-orange-500 font-semibold hover:text-orange-600"
+                  >
+                    contacto@xdasp.me
+                  </a>
+                  . Los datos que nos facilites para soporte se tratarán solo para gestionar tu consulta, de acuerdo con la Política de Privacidad.
                 </p>
                 <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
                   <Shield className="w-4 h-4" />
