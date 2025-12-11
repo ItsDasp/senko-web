@@ -3,61 +3,67 @@ import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Bot, Shield, Eye, Lock, Database, Trash2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Bot, Shield, Eye, Lock, Database, Trash2, Download } from 'lucide-react';
 
 function Privacy() {
   const sections = [
     {
       icon: <Database className="w-6 h-6" />,
-      title: "Información que Recopilamos",
-      content: "Senko Bot recopila únicamente la información mínima necesaria para funcionar: IDs de usuario y servidor de Discord, configuraciones básicas del bot, estados AFK temporales, y registros de uso de comandos para estadísticas básicas."
+      title: "Qué datos recopilamos",
+      content: "El Servicio solo trata la información estrictamente necesaria para funcionar: identificadores de Discord, configuraciones del servidor, datos de niveles y economía virtual, registros de moderación y la información que introduces en tickets, sugerencias, recordatorios y cumpleaños."
     },
     {
       icon: <Eye className="w-6 h-6" />,
-      title: "Cómo Usamos tu Información",
-      content: "Utilizamos la información recopilada para: proporcionar funcionalidades del bot, mantener estados AFK, generar estadísticas básicas de uso, y mejorar nuestros servicios. Nunca vendemos ni compartimos tu información con terceros."
+      title: "Datos que no recopilamos",
+      content: "No recopilamos contraseñas de Discord ni métodos de pago y no realizamos seguimiento de tu navegación web. Tampoco accedemos al contenido de tus mensajes privados (DM), ni entre usuarios ni dirigidos al bot, y no te pedimos datos sensibles como salud, religión u orientación sexual."
     },
     {
       icon: <Lock className="w-6 h-6" />,
-      title: "Almacenamiento y Seguridad",
-      content: "Todos los datos se almacenan de forma segura en servidores protegidos. Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger tu información contra acceso no autorizado, alteración o destrucción."
+      title: "Para qué usamos los datos",
+      content: "Usamos los datos para prestar las funciones del Servicio (moderación, logs, niveles, economía virtual y utilidades), personalizar la experiencia, mejorar el rendimiento y ayudar a mantener la seguridad de los servidores donde está activo."
     },
     {
       icon: <Trash2 className="w-6 h-6" />,
-      title: "Retención de Datos",
-      content: "Los estados AFK se eliminan automáticamente cuando el usuario vuelve a estar activo. Las configuraciones del servidor se mantienen mientras el bot esté en el servidor. Los registros de comandos se conservan por un período limitado solo para estadísticas."
+      title: "Almacenamiento y seguridad",
+      content: "Los datos se guardan en una base de datos externa y en la infraestructura de Discord, aplicando medidas técnicas y organizativas razonables. Ninguna medida es absoluta, pero actuamos con diligencia ante incidentes y procuramos mitigar su impacto."
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Tus Derechos",
-      content: "Tienes derecho a: saber qué información tenemos sobre ti, solicitar la eliminación de tus datos, corregir información incorrecta, y retirar el consentimiento en cualquier momento removiendo el bot de tu servidor."
+      title: "Tus derechos y control",
+      content: "Puedes solicitar acceso, rectificación o eliminación de tus datos. También puedes pedir la supresión completa de la información asociada a tu usuario o servidor contactando con los canales de soporte indicados en la Política de Privacidad."
+    },
+    {
+      icon: <Bot className="w-6 h-6" />,
+      title: "Bases legales y Discord",
+      content: "El tratamiento se basa en la prestación del servicio, intereses legítimos y, en algunos casos, tu consentimiento. El Servicio respeta las políticas para desarrolladores de Discord y solo usa los datos que su API pone a disposición."
     }
   ];
 
   const dataTypes = [
     {
-      type: "IDs de Discord",
-      description: "IDs únicos de usuarios y servidores para identificación",
-      retention: "Mientras el bot esté en uso",
-      purpose: "Funcionamiento básico del bot"
+      type: "IDs y metadatos de Discord",
+      description: "IDs de usuario y servidor, nombres y otros datos básicos necesarios para identificar cuentas y servidores en Discord.",
+      retention: "Mientras el Servicio permanezca activo y se use en el servidor",
+      purpose: "Funcionamiento básico, estadísticas y diagnóstico del Servicio"
     },
     {
-      type: "Estados AFK",
-      description: "Razón y tiempo de ausencia cuando usas /afk",
-      retention: "Hasta que vuelvas a estar activo",
-      purpose: "Notificar a otros usuarios de tu ausencia"
+      type: "Configuraciones del servidor",
+      description: "Preferencias de moderación, logs, canales configurados, ajustes de cumpleaños, sugerencias y otras opciones de administración.",
+      retention: "Mientras el Servicio esté habilitado o hasta que un administrador las elimine",
+      purpose: "Aplicar las funciones configuradas y personalizar el comportamiento en cada servidor"
     },
     {
-      type: "Configuraciones",
-      description: "Preferencias y configuraciones del servidor",
-      retention: "Mientras el bot esté en el servidor",
-      purpose: "Personalización del comportamiento del bot"
+      type: "Perfiles, niveles y economía",
+      description: "Nivel, experiencia, monedas virtuales, logros e historial de interacciones sociales asociados a tu usuario.",
+      retention: "Mientras sigas usando el Servicio o hasta que solicites su eliminación",
+      purpose: "Ofrecer sistemas de progresión, gamificación y estadísticas sociales"
     },
     {
-      type: "Registros de Comandos",
-      description: "Estadísticas básicas de uso de comandos",
-      retention: "Mientras el bot esté en uso",
-      purpose: "Mejora del servicio y estadísticas"
+      type: "Moderación, tickets y utilidades",
+      description: "Advertencias, registros de automoderación, información de tickets, sugerencias, recordatorios y tareas personales.",
+      retention: "Mientras sean necesarios para moderación, soporte y funcionamiento de estas funciones",
+      purpose: "Mantener la seguridad, gestionar soporte y proporcionar utilidades al Usuario"
     }
   ];
 
@@ -90,10 +96,10 @@ function Privacy() {
                 Política de Privacidad
               </h1>
               <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-                Tu privacidad es importante para nosotros. Aquí te explicamos cómo protegemos tu información.
+                Tu privacidad es importante para nosotros. Aquí resumimos, de forma clara, qué datos recopila el Servicio, para qué los usa y cómo puedes ejercer tus derechos.
               </p>
               <p className="text-sm text-muted-foreground mt-4">
-                Última actualización: 27 de junio de 2025
+                Última actualización: 10 de diciembre de 2025
               </p>
             </motion.div>
 
@@ -109,8 +115,7 @@ function Privacy() {
                   <div>
                     <h3 className="font-semibold text-green-400 mb-2">Compromiso con la Privacidad</h3>
                     <p className="text-green-400/80">
-                      Senko Bot está diseñado con la privacidad en mente. Recopilamos solo la información 
-                      mínima necesaria para funcionar y nunca compartimos tus datos con terceros.
+                      Senko Bot está diseñado con la privacidad y el cumplimiento normativo en mente. Tratamos solo los datos necesarios, seguimos las políticas de Discord y no vendemos tus datos personales ni los cedemos con fines comerciales.
                     </p>
                   </div>
                 </div>
@@ -187,6 +192,31 @@ function Privacy() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 }}
+                className="mb-16 text-center"
+              >
+                <p className="text-foreground/70 mb-4">
+                  También puedes descargar la versión completa de nuestra Política de
+                  Privacidad en formato documento.
+                </p>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+                >
+                  <a
+                    href="/Senko - Politicas de Privacidad.docx"
+                    download
+                  >
+                    <Download className="w-5 h-5 mr-2" />
+                    Descargar Política de Privacidad (.docx)
+                  </a>
+                </Button>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.0 }}
                 className="bg-secondary/50 rounded-2xl p-8"
               >
@@ -202,9 +232,8 @@ function Privacy() {
                     ¿Necesitas Eliminar tus Datos?
                   </h3>
                   <p className="text-foreground/70 mb-6 max-w-xl mx-auto">
-                    Si deseas que eliminemos toda la información asociada con tu usuario o servidor, 
-                    simplemente contáctanos en nuestro servidor de Discord. Procesaremos tu solicitud 
-                    de manera rápida y completa.
+                    Si deseas acceder, corregir o eliminar la información asociada con tu usuario o servidor, 
+                    contáctanos en nuestro servidor de soporte indicando tu ID de usuario y, si aplica, el ID del servidor. Verificaremos tu identidad y procesaremos la solicitud en un plazo razonable.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-4 text-sm max-w-lg mx-auto">

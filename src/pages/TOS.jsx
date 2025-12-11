@@ -3,57 +3,64 @@ import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Bot, Shield, AlertTriangle, FileText } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Bot, Shield, AlertTriangle, FileText, Download } from 'lucide-react';
 
 function TOS() {
   const sections = [
     {
       title: "1. Aceptación de los Términos",
-      content: "Al invitar y usar Senko Bot en tu servidor de Discord, aceptas estar sujeto a estos Términos de Servicio. Si no estás de acuerdo con alguna parte de estos términos, no debes usar nuestro servicio."
+      content: "Al invitar o usar Senko Bot en un servidor de Discord, confirmas que has leído y aceptas estos Términos de Servicio. Si no estás de acuerdo, no debes usar el Servicio y puedes solicitar la eliminación de tus datos según la Política de Privacidad."
     },
     {
       title: "2. Descripción del Servicio",
-      content: "Senko Bot es un bot de Discord que proporciona comandos de entretenimiento, utilidades y moderación básica. El servicio se proporciona 'tal como está' y puede ser modificado o discontinuado en cualquier momento."
+      content: "Senko Bot es un proyecto independiente no afiliado a Discord que ofrece herramientas de moderación, automoderación, niveles, economía virtual, interacciones sociales, tickets, sugerencias, recordatorios, cumpleaños y otras utilidades que pueden cambiar con el tiempo."
     },
     {
       title: "3. Uso Aceptable",
-      content: "Te comprometes a usar Senko Bot de manera responsable y legal. No debes usar el bot para: spam, acoso, contenido ilegal, violación de los términos de servicio de Discord, o cualquier actividad que pueda dañar el servicio o a otros usuarios."
+      content: "Te comprometes a usar el Servicio de forma responsable y legal. Está prohibido usarlo para actividades ilícitas, spam, acoso, difusión de contenido que infrinja derechos de terceros, evadir sistemas de seguridad o explotar vulnerabilidades del bot o de Discord."
     },
     {
       title: "4. Privacidad y Datos",
-      content: "Senko Bot recopila datos mínimos necesarios para su funcionamiento, como IDs de usuario y servidor, configuraciones básicas y estados temporales (como AFK). No recopilamos ni almacenamos contenido de mensajes personales."
+      content: "El tratamiento de datos personales se rige por la Política de Privacidad de Senko Bot, donde se describen las categorías de datos tratados, las finalidades, la base legal, los plazos de conservación y los derechos del usuario. Al usar el Servicio aceptas dicho tratamiento."
     },
     {
       title: "5. Disponibilidad del Servicio",
-      content: "Aunque nos esforzamos por mantener Senko Bot disponible 24/7, no garantizamos un tiempo de actividad del 100%. El servicio puede experimentar interrupciones por mantenimiento, actualizaciones o problemas técnicos."
+      content: "El Servicio se ofrece tal cual y según disponibilidad. Puede sufrir interrupciones por mantenimiento, fallos técnicos, cambios en la API de Discord u otros factores externos, sin garantía de funcionamiento continuo ni derecho a compensación."
     },
     {
       title: "6. Limitaciones de Responsabilidad",
-      content: "Senko Bot se proporciona sin garantías de ningún tipo. No somos responsables de daños directos, indirectos, incidentales o consecuentes que puedan resultar del uso del bot."
+      content: "En la máxima medida permitida por la ley, el desarrollador de Senko Bot no será responsable de daños indirectos, incidentales, especiales o consecuenciales derivados del uso o imposibilidad de uso del Servicio, ni de decisiones de moderación tomadas por administradores de servidores."
     },
     {
       title: "7. Modificaciones del Servicio",
-      content: "Nos reservamos el derecho de modificar, suspender o discontinuar cualquier aspecto de Senko Bot en cualquier momento sin previo aviso. También podemos actualizar estos términos ocasionalmente."
+      content: "Podemos añadir, modificar o retirar comandos y funcionalidades del Servicio, así como actualizar estos Términos para adaptarlos a cambios legales, técnicos o organizativos. El uso continuado del bot tras los cambios implica la aceptación de la versión vigente."
     },
     {
       title: "8. Terminación",
-      content: "Podemos terminar o suspender el acceso a Senko Bot inmediatamente, sin previo aviso, por cualquier motivo, incluyendo la violación de estos Términos de Servicio."
+      content: "Podemos restringir o suspender el uso del Servicio para determinados usuarios o servidores cuando existan indicios razonables de abuso, uso malintencionado o incumplimiento de estos Términos o de las normas de Discord, sin obligación de aviso previo."
     },
     {
       title: "9. Cumplimiento con Discord",
-      content: "El uso de Senko Bot debe cumplir con los Términos de Servicio y Pautas de la Comunidad de Discord. Cualquier violación puede resultar en la restricción del acceso al bot."
+      content: "Senko Bot opera sobre la plataforma de Discord y respeta sus condiciones para desarrolladores. Debes cumplir tanto estos Términos como los Términos de Servicio y Normas de la Comunidad de Discord; las infracciones pueden conllevar medidas por parte de Discord y/o la restricción de acceso al bot."
     },
     {
       title: "10. Contacto",
       content: (
         <>
-        Si tienes preguntas sobre estos Términos de Servicio, puedes contactarnos a través de nuestro servidor de Discord de soporte o usando el comando /help en el bot. También puedes escribirnos al correo {' '}
+        Si tienes preguntas sobre estos Términos de Servicio o sobre el uso de Senko Bot, puedes contactarnos a través de nuestro servidor de soporte en Discord o usando el comando /help en el bot. También puedes escribirnos al correo{' '}
         <a
             href="mailto:senko@nekomera.xyz"
             className="text-orange-500 font-semibold hover:text-orange-600 "
           >
             senko@nekomera.xyz
-          </a>.
+          </a>{' '}o a{' '}
+          <a
+            href="mailto:contacto@xdasp.me"
+            className="text-orange-500 font-semibold hover:text-orange-600 "
+          >
+            contacto@xdasp.me
+          </a>. Los datos que nos facilites para soporte se tratarán solo para gestionar tu consulta, de acuerdo con la Política de Privacidad.
         </>
       )
     }
@@ -88,10 +95,10 @@ function TOS() {
                 Términos de Servicio
               </h1>
               <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-                Información importante sobre el uso de Senko Bot
+                Condiciones legales para usar Senko Bot en tu servidor de Discord
               </p>
               <p className="text-sm text-muted-foreground mt-4">
-                Última actualización: 27 de junio de 2025
+                Última actualización: 10 de diciembre de 2025
               </p>
             </motion.div>
 
@@ -139,6 +146,31 @@ function TOS() {
                   </div>
                 </motion.div>
               ))}
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 }}
+                className="mb-10 text-center"
+              >
+                <p className="text-foreground/70 mb-4">
+                  También puedes descargar la versión completa de los Términos de
+                  Servicio en un documento para revisarlos con más detalle.
+                </p>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+                >
+                  <a
+                    href="/Senko - Terminos de Servicio.docx"
+                    download
+                  >
+                    <Download className="w-5 h-5 mr-2" />
+                    Descargar Términos de Servicio (.docx)
+                  </a>
+                </Button>
+              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
